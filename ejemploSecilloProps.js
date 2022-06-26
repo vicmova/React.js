@@ -21,32 +21,24 @@ export default function Saludo(props){
 
 import { useState } from "react";
 
-//recibe props definidos en App.js
-
-export default function Saludo(props){
+export default function Contador(){
 
     const[contador, setContador] = useState(0);
-    
-    //vemos qué estamos recibiendo (qué hemos definido) desde App.js
-    console.log(props);
 
-    const { mensaje, nombre, code } = props;
-    return(
+    return (
 
-        <div>
-
-        <button type="submit" onClick={() => (setContador(contador +1))}>Cuenta</button>
+    <div>
         
-        <p><h2>Mostrar Componente: Saludo y prop nombre: {nombre} {code} </h2> </p>
-        
-        <p>{mensaje}</p>
-
         <h3>Contador: {contador}</h3>
-        
-        </div>
+        <button type="submit" onClick={() => (setContador(contador +1))}>Cuenta</button>
+    
+    </div>
+    
     );
 
 } 
+   
+
 
 //////////////////////////////////////////////////////////
 //////////////fichero App.js//////////////////////////////
@@ -55,13 +47,17 @@ export default function Saludo(props){
 import logo from './logo.svg';
 import './App.css';
 import Saludo from './components/Saludo';
+import Contador from './components/Contador'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         
-        <Saludo mensaje="¿Qué tal estás?" nombre="Alf" code="04" />
+        <h4><Contador /></h4>
+        
+        <h3><Saludo mensaje="¿Qué tal estás?" nombre="Alf" code="04" /></h3>
+        <h4><Saludo nombre="Alef" code="06" /></h4>
       
       </header>
     </div>
