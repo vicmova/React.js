@@ -14,4 +14,24 @@ export default function Saludo(props){
         </div>
     );
 
-} 
+}
+
+//fichero App.js
+
+import logo from './logo.svg';
+import './App.css';
+import Saludo from './components/Saludo';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        
+        <Saludo mensaje="¿Qué tal estás?" nombre="Alf" code="04" />
+      
+      </header>
+    </div>
+  );
+}
+
+export default App;
