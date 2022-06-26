@@ -1,4 +1,5 @@
 //recibe props definidos en App.js
+//este fichero está alojado en el directorio: components;
 export default function Saludo(props){
     //vemos qué estamos recibiendo (qué hemos definido) desde App.js
     console.log(props);
