@@ -37,6 +37,48 @@ export default function Contador(){
     );
 
 } 
+
+//////////////////////////////////////////////////////////
+
+import { useState, useEffect } from "react";
+
+export default function Contador(){
+
+    const[contador, setContador] = useState(0);
+    const [semaforo, setSemaforo] = useState(false);
+
+    useEffect(() => {
+
+        console.log(semaforo);
+
+    }, [semaforo]);
+
+    const contar = () => {
+
+        console.log("entramos en la función contar.");
+        
+        setContador(contador +1);
+        setSemaforo(!semaforo);
+
+    }
+
+    console.log(semaforo);
+
+    return (
+
+    <div>
+        
+        <h3>Contador: {contador}</h3>
+        <button type="submit" onClick={() => (setContador(contador +1))}>Cuenta</button>
+        
+        <button type="submit" onClick={contar}>CuentaEffect</button>
+        <p>El semáforo está en color: {semaforo ? "red" : "green"}</p>
+
+    </div>
+    
+    );
+
+} 
    
 
 
