@@ -49,3 +49,38 @@ function App() {
 
 export default App;
 
+//////////////////////////////////
+mkdir pages//////////////////////
+AboutMe.js file: ////////////////
+/////////////////////////////////
+
+export default function AboutMe(){
+
+    return(
+
+        <div>
+            <h4>Desde About Me!</h4>
+        </div>
+
+
+    );
+
+}
+
+////////////////////////////////////////
+file Contact.js/////////////////////////
+////////////////////////////////////////
+export default function Contact(){
+
+    return(
+
+        <div>
+            <h4>Desde contact!</h4>
+        </div>
+
+    );
+
+}
+
+
+
